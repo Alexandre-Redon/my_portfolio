@@ -1,0 +1,54 @@
+#presentation {
+    height: calc(100vh - 4rem);
+    width: 100vw;
+    max-width: 75rem;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.presentationPhoto {
+    position: absolute;
+    top: -4rem;
+    right: 0;
+    z-index: -1;
+    object-fit: cover;
+    height: 100%;
+}
+
+.presentationContenu {
+    height: 100vh;
+    width: 100vw;
+    padding: 2rem;
+    font-size: 3rem;
+    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hello {
+    font-size: 1.75rem;
+    font-weight: 100;
+
+}
+
+.nom {
+    color: #EF6D58;
+}
+
+.button-a-propos {
+    background: white;
+    margin: 1rem 0;
+    padding: 0.75rem 2rem;
+    border: none;
+    border-radius: 2rem;
+    cursor: pointer;
+
+}
+
+.descriptionPara {
+    font-size: medium;
+    font-weight: 200;
+    letter-spacing: 1px;
+}
