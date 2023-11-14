@@ -1,0 +1,51 @@
+#a-propos {
+    overflow: hidden;
+    width: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+.a-propos-titre {
+    font-size: 3rem;
+    font-weight: 600;
+    padding-top: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.a-propos-description {
+    font-size: 1rem;
+    font-weight: 200;
+    max-width: 50rem;
+    letter-spacing: 1px;
+    padding: 0 2rem;
+}
+
+.listSkills {
+    padding: 1.5rem;
+    max-width: 80%;
+    width: 100vw;
+    text-align: left;
+}
+
+.listSkillItem {
+    display: flex;
+    margin: 1rem;
+    padding: 1.5rem 2rem;
+    border-radius: 5px;
+    background: rgb(4, 9, 42);
+}
+
+.Itemlogo {
+    object-fit: contain;
+    height: 3rem;
+    width: 3rem;
+    margin-right: 2rem;
+}
+
+.Itemtext {
+    font-size: 0.75rem;
+    font-weight: 200;
+}

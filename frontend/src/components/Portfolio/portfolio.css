@@ -1,0 +1,47 @@
+#portfolio {
+    overflow: hidden;
+    width: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 1rem;
+}
+
+.mesProjets {
+    font-size: 3rem;
+    font-weight: 600;
+    padding-top: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.mesProjets-desc {
+    font-size: 1rem;
+    font-weight: 200;
+    max-width: 50rem;
+    letter-spacing: 1px;
+    padding: 0 2rem;
+    margin-bottom: 3rem;
+}
+.projectItems {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.projectItem {
+    flex: 0 0 calc(33.33% - 2rem);
+    justify-content: center;
+    justify-items: center;
+    margin: 1rem;
+    padding: 1.5rem 2rem;
+    border-radius: 5px;
+    background: rgb(4, 9, 42);
+}
+
+.projectItemImage {
+    object-fit: contain;
+    height: 3rem;
+    width: 3rem;
+}
