@@ -1,4 +1,3 @@
-import { Link } from "react-scroll";
 import "./presentation.css";
 
 const Presentation = () => {
@@ -13,9 +12,9 @@ const Presentation = () => {
         <p className="descriptionPara">
           Je suis en alternance depuis 2022. Mon objectif : devenir fullstack !
         </p>
-        <Link to="">
-          <button className="button-a-propos">À Propos</button>
-        </Link>
+        <a href="https://github.com/WasthElse2002" target="_blank">
+          <button className="button-a-propos">Voir mon Github</button>
+        </a>
       </div>
       <img src="" alt="" className="presentationPhoto" />
     </section>

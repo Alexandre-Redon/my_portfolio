@@ -6,7 +6,7 @@ import NestLogo from "../../assets/NestJS.svg";
 const APropos = () => {
   return (
     <section id="a-propos">
-      <span className="a-propos-titre">Ce que je fais</span>
+      <span className="a-propos-titre">Mes compétences</span>
       <span className="a-propos-description">
         Je suis actuellement en 1ère année de Master Développement Web à Ynov
         Bordeaux. Je commence à me familiariser avec le HTML, CSS et Javascript.

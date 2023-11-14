@@ -8,23 +8,35 @@ function NavBar() {
     <nav className="navBar">
       <img src={logo} alt="logo" className="logo" />
       <div className="desktopMenu">
-        <Link className="desktopMenuItemListItem" to="">
+        <Link
+          className="desktopMenuItemListItem"
+          to="intro"
+          spy={true}
+          smooth={true}
+        >
           Accueil
         </Link>
-        <Link className="desktopMenuItemListItem" to="">
+        <Link
+          className="desktopMenuItemListItem"
+          to="a-propos"
+          spy={true}
+          smooth={true}
+        >
           À propos
         </Link>
-        <Link className="desktopMenuItemListItem" to="">
-          Formations
-        </Link>
-        <Link className="desktopMenuItemListItem" to="">
+        <Link
+          className="desktopMenuItemListItem"
+          to="portfolio"
+          spy={true}
+          smooth={true}
+        >
           PortFolio
         </Link>
       </div>
-      <button className="desktopMenuButton">
+      <Link to="contact" className="desktopMenuButton" spy={true} smooth={true}>
         <img src={contact} alt="" className="imageButtonContact" />
         Me contacter
-      </button>
+      </Link>
     </nav>
   );
 }

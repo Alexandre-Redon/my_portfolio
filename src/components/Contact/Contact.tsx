@@ -1,14 +1,38 @@
-import { useState } from "react";
 import "./contact.css";
+import { MutableRefObject, useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
   const [name, setName] = useState<string>("");
   const [email, setEmail] = useState<string>("");
   const [message, setMessage] = useState<string>("");
+  const [messageisSent, setMessageisSent] = useState<boolean>(false);
+  const [messageButton] = useState<string>("Message envoyé");
+
+  const form = useRef<HTMLFormElement>();
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    alert(`Nom: ${name} Email: ${email} Message: ${message}`);
+    console.log(form.current);
+
+    form.current
+      ? emailjs
+          .sendForm(
+            "service_v7z2d0r",
+            "template_1h3gmuo",
+            form.current,
+            "lvJBVI9meZRwC1GHa"
+          )
+          .then(
+            (result) => {
+              console.log(result.text);
+              setMessageisSent(true);
+            },
+            (error) => {
+              console.log(error.text);
+            }
+          )
+      : console.log("error");
   };
 
   return (
@@ -18,18 +42,24 @@ const Contact = () => {
         Merci de remplir le formulaire ci-dessous afin de prendre contact avec
         moi.
       </p>
-      <form className="contactForm" onSubmit={handleSubmit}>
+      <form
+        ref={form as MutableRefObject<HTMLFormElement>}
+        className="contactForm"
+        onSubmit={handleSubmit}
+      >
         <input
           type="text"
           placeholder="Nom"
           className="contactFormInputName"
           value={name}
+          name="name"
           onChange={(e) => setName(e.target.value)}
         />
         <input
           type="email"
           placeholder="Email"
           className="contactFormInputEmail"
+          name="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
@@ -37,11 +67,12 @@ const Contact = () => {
           placeholder="Message"
           value={message}
           className="contactFormInputMessage"
+          name="message"
           rows={5}
           onChange={(e) => setMessage(e.target.value)}
         ></textarea>
         <button className="contactFormSubmitButton" type="submit">
-          Envoyer
+          {messageisSent ? messageButton : "Envoyer"}
         </button>
       </form>
     </div>

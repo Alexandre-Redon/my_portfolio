@@ -7,6 +7,23 @@
     text-align: center;
     justify-content: center;
     margin: 0 auto;
+    margin-top: 1rem;
+}
+
+.mesProjets {
+    font-size: 3rem;
+    font-weight: 600;
+    padding-top: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.mesProjets-desc {
+    font-size: 1rem;
+    font-weight: 200;
+    max-width: 50rem;
+    letter-spacing: 1px;
+    padding: 0 2rem;
+    margin-bottom: 3rem;
 }
 .projectItems {
     display: flex;
