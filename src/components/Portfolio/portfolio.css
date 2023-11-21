@@ -29,15 +29,18 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    flex-direction: row;
 }
 .projectItem {
-    flex: 0 0 calc(33.33% - 2rem);
+    flex: 1;
     justify-content: center;
     justify-items: center;
     margin: 1rem;
     padding: 1.5rem 2rem;
     border-radius: 5px;
     background: rgb(4, 9, 42);
+    min-width: 250px;
+
 }
 
 .projectItemImage {

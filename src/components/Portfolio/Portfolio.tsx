@@ -1,63 +1,20 @@
 import "./portfolio.css";
-import LogoRLIdle from "../../assets/logo.webp";
+import { useEffect, useState } from "react";
+import { IProject } from "../../types/projects";
+import noProject from "../../assets/no_project.svg";
 
 const Portfolio = () => {
-  const myProjets = [
-    {
-      nom: "RL Idle",
-      description: "Un Idle game basé sur le jeu Rocket League",
-      lienGit: "https://github.com/RL-IDLE/rl-idle",
-      image: LogoRLIdle,
-    },
-    {
-      nom: "RL Idle",
-      description: "Un Idle game basé sur le jeu Rocket League",
-      lienGit: "https://github.com/RL-IDLE/rl-idle",
-      image: LogoRLIdle,
-    },
-    {
-      nom: "RL Idle",
-      description: "Un Idle game basé sur le jeu Rocket League",
-      lienGit: "https://github.com/RL-IDLE/rl-idle",
-      image: LogoRLIdle,
-    },
-    {
-      nom: "RL Idle",
-      description: "Un Idle game basé sur le jeu Rocket League",
-      lienGit: "https://github.com/RL-IDLE/rl-idle",
-      image: LogoRLIdle,
-    },
-    {
-      nom: "RL Idle",
-      description: "Un Idle game basé sur le jeu Rocket League",
-      lienGit: "https://github.com/RL-IDLE/rl-idle",
-      image: LogoRLIdle,
-    },
-    {
-      nom: "RL Idle",
-      description: "Un Idle game basé sur le jeu Rocket League",
-      lienGit: "https://github.com/RL-IDLE/rl-idle",
-      image: LogoRLIdle,
-    },
-    {
-      nom: "RL Idle",
-      description: "Un Idle game basé sur le jeu Rocket League",
-      lienGit: "https://github.com/RL-IDLE/rl-idle",
-      image: LogoRLIdle,
-    },
-    {
-      nom: "RL Idle",
-      description: "Un Idle game basé sur le jeu Rocket League",
-      lienGit: "https://github.com/RL-IDLE/rl-idle",
-      image: LogoRLIdle,
-    },
-    {
-      nom: "RL Idle",
-      description: "Un Idle game basé sur le jeu Rocket League",
-      lienGit: "https://github.com/RL-IDLE/rl-idle",
-      image: LogoRLIdle,
-    },
-  ];
+  const [projets, setProjets] = useState<IProject[]>([]);
+  const getProjets = () => {
+    fetch("http://localhost:3000/projects/")
+      .then((res) => res.json())
+      .then((res) => setProjets(res))
+      .catch((err) => console.log(err));
+  };
+
+  useEffect(() => {
+    getProjets();
+  }, []);
 
   return (
     <section id="portfolio">
@@ -66,11 +23,14 @@ const Portfolio = () => {
         Voici les différents projets réalisés depuis 2 ans.
       </span>
       <div className="projectItems">
-        {myProjets.map((item) => (
-          <div className="projectItem">
+        {projets.map((item, key) => (
+          <div className="projectItem" key={key}>
             <a href={item.lienGit}>
-              <img className="projectItemImage" src={item.image} />
-              <h3 className="projectItemTitle">{item.nom}</h3>
+              <img
+                className="projectItemImage"
+                src={item.imageUrl ? item.imageUrl : noProject}
+              />
+              <h3 className="projectItemTitle">{item.name}</h3>
               <p className="projectItemTitle">{item.description}</p>
             </a>
           </div>
