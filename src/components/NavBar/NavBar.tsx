@@ -10,7 +10,7 @@ function NavBar() {
       <div className="desktopMenu">
         <Link
           className="desktopMenuItemListItem"
-          to="intro"
+          to="presentation"
           spy={true}
           smooth={true}
         >

@@ -49,3 +49,27 @@
     width: 1rem;
     margin: 1rem;
 }
+
+@media only screen and (max-width: 600px) {
+
+    .navBar {
+        background: #28293E;
+        height: 5rem;
+        max-width: 75rem;
+        width: 100vw;
+        margin: 0 auto;
+        padding: 1rem 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: sticky;
+        top: 0;
+        z-index: 3;
+    }
+
+    .desktopMenuItemListItem {
+        margin: 1rem;
+        cursor: none;
+    }
+
+}

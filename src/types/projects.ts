@@ -4,7 +4,7 @@ export const ProjectSchema = z.object({
   id: z.string(),
   name: z.string(),
   description: z.string(),
-  lienGit: z.string(),
+  githubUrl: z.string(),
   imageUrl: z.optional(z.string()),
   websiteUrl: z.optional(z.string()),
 });
