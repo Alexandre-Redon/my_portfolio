@@ -6,7 +6,7 @@ import noProject from "../../assets/no_project.svg";
 const Portfolio = () => {
   const [projets, setProjets] = useState<IProject[]>([]);
   const getProjets = () => {
-    fetch("http://localhost:3000/projects/")
+    fetch("http://my-portfolio-backend-one.vercel.app/projects/")
       .then((res) => res.json())
       .then((res) => setProjets(res))
       .catch((err) => console.log(err));
@@ -25,7 +25,7 @@ const Portfolio = () => {
       <div className="projectItems">
         {projets.map((item, key) => (
           <div className="projectItem" key={key}>
-            <a href={item.lienGit}>
+            <a href={item.description}>
               <img
                 className="projectItemImage"
                 src={item.imageUrl ? item.imageUrl : noProject}
