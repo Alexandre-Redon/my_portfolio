@@ -6,7 +6,7 @@ import noProject from "../../assets/no_project.svg";
 const Portfolio = () => {
   const [projets, setProjets] = useState<IProject[]>([]);
   const getProjets = () => {
-    fetch("http://my-portfolio-backend-one.vercel.app/projects/")
+    fetch("https://my-portfolio-backend-one.vercel.app/projects/")
       .then((res) => res.json())
       .then((res) => setProjets(res))
       .catch((err) => console.log(err));
