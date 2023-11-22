@@ -47,6 +47,12 @@
 
 }
 
+.button-a-propos:hover {
+    transition: all 0.3s ease-in-out;
+    background-color: #EF6D58;
+    color: white;
+}
+
 .descriptionPara {
     font-size: medium;
     font-weight: 200;

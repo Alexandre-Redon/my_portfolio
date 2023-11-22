@@ -45,6 +45,12 @@
     background: rgb(40, 40, 40);
 }
 
+.contactFormInputMessage {
+    min-height: 5rem;
+    min-width: 40rem;
+    max-height: 15rem;
+}
+
 .contactFormSubmitButton {
     background-color: white;
     border: none;
@@ -52,4 +58,10 @@
     border-radius: 0.5rem;
     cursor: pointer;
     margin: 1rem;
+}
+
+.contactFormSubmitButton:hover {
+    transition: all 0.3s ease-in-out;
+    background-color: #EF6D58;
+    color: white;
 }

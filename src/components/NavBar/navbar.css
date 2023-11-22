@@ -35,12 +35,17 @@
     color: black;
     border: none;
     display: flex;
-    justify-content: center;
     align-items: center;
     padding: 0 1rem;
     border-radius: 2rem;
     cursor: pointer;
+    padding-left: 0.1rem;
+}
 
+.desktopMenuButton:hover {
+    transition: all 0.3s ease-in-out;
+    background-color: #EF6D58;
+    color: white;
 }
 
 .imageButtonContact {
