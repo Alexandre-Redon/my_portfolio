@@ -27,6 +27,9 @@ const Contact = () => {
             (result) => {
               console.log(result.text);
               setMessageisSent(true);
+              setName("");
+              setEmail("");
+              setMessage("");
             },
             (error) => {
               console.log(error.text);
@@ -53,7 +56,10 @@ const Contact = () => {
           className="contactFormInputName"
           value={name}
           name="name"
-          onChange={(e) => setName(e.target.value)}
+          onChange={(e) => {
+            setName(e.target.value);
+            messageisSent ? setMessageisSent(false) : "Envoyer";
+          }}
         />
         <input
           type="email"
@@ -61,7 +67,10 @@ const Contact = () => {
           className="contactFormInputEmail"
           name="email"
           value={email}
-          onChange={(e) => setEmail(e.target.value)}
+          onChange={(e) => {
+            setEmail(e.target.value);
+            messageisSent ? setMessageisSent(false) : "Envoyer";
+          }}
         />
         <textarea
           placeholder="Message"
@@ -69,9 +78,16 @@ const Contact = () => {
           className="contactFormInputMessage"
           name="message"
           rows={5}
-          onChange={(e) => setMessage(e.target.value)}
+          onChange={(e) => {
+            setMessage(e.target.value);
+            messageisSent ? setMessageisSent(false) : "Envoyer";
+          }}
         ></textarea>
-        <button className="contactFormSubmitButton" type="submit">
+        <button
+          className="contactFormSubmitButton"
+          disabled={messageisSent || !name || !email || !message}
+          type="submit"
+        >
           {messageisSent ? messageButton : "Envoyer"}
         </button>
       </form>
