@@ -25,7 +25,7 @@ const Portfolio = () => {
       <div className="projectItems">
         {projets.map((item, key) => (
           <div className="projectItem" key={key}>
-            <a href={item.description}>
+            <a href={item.githubUrl} target="_blank">
               <img
                 className="projectItemImage"
                 src={item.imageUrl ? item.imageUrl : noProject}
