@@ -48,3 +48,22 @@
     height: 3rem;
     width: 3rem;
 }
+
+.projectItemTitle {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.projectItemDesc {
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 200;
+    margin-top: 1rem;
+    letter-spacing: 1px;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}

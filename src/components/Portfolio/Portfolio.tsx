@@ -31,7 +31,7 @@ const Portfolio = () => {
                 src={item.imageUrl ? item.imageUrl : noProject}
               />
               <h3 className="projectItemTitle">{item.name}</h3>
-              <p className="projectItemTitle">{item.description}</p>
+              <p className="projectItemDesc">{item.description}</p>
             </a>
           </div>
         ))}
