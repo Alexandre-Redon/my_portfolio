@@ -72,7 +72,7 @@
     color: white;
 }
 
-@media screen and (min-width: 430px) and (max-width: 767px) {
+@media screen and (max-width: 767px) {
     .contactFormInputMessage { 
         min-width: 15rem;
     }

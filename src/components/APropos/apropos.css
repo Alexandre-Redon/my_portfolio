@@ -50,7 +50,7 @@
     font-weight: 200;
 }
 
-@media screen and (min-width: 430px) and (max-width: 767px) {
+@media screen and (max-width: 767px) {
    .listSkillItemText {
         font-size: 2vw;
    }
