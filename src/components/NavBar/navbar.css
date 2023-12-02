@@ -48,6 +48,12 @@
     color: white;
 }
 
+.desktopMenuButton.active {
+    color: black;
+    padding-bottom: 0;
+    border-bottom: 0rem;
+}
+
 .imageButtonContact {
     object-fit: cover;
     height: 1rem;
@@ -55,26 +61,51 @@
     margin: 1rem;
 }
 
+.active {
+    color: #EF6D58;
+    padding-bottom: 0.5rem;
+    border-bottom: 0.2rem solid #EF6D58 ;
+}
+
+.mobileMenu {
+    position: absolute;
+    top: 4rem;
+    right: 2rem;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem;
+    height: fit-content;
+    min-width: 15rem;
+    background: rgb(40, 40, 40);
+    border-radius: 0.5rem;
+}
+
+.listItemMobileMenu {
+    color: white;
+    padding: 0.5rem 3rem;
+    margin: 0.25rem;
+    background: rgb(30,30,30);
+}
+
+.navMenu {
+    display: none;
+    object-fit: cover;
+    height: 1.8rem;
+}
+
 @media only screen and (max-width: 730px) {
 
-    .navBar {
-        background: #28293E;
-        height: 5rem;
-        max-width: 75rem;
-        width: 100vw;
-        margin: 0 auto;
-        padding: 1rem 2rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: sticky;
-        top: 0;
-        z-index: 3;
+    .navMenu {
+        display: block;
     }
 
-    .desktopMenuItemListItem {
-        margin: 1rem;
-        cursor: none;
+    .desktopMenuButton {
+        display: none;
+    }
+
+    .desktopMenu {
+        display: none;
     }
 
 }
