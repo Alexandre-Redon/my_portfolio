@@ -67,3 +67,17 @@ a {
     text-decoration: none;
     color: #fff;
 }
+
+@media screen and (min-width: 430px) and (max-width: 767px) {
+    #portfolio {
+        width: 100%;
+    }
+
+    .projectItem {
+        margin: 2rem 2rem 0;
+    }
+    
+    .mesProjets-desc {
+        margin-bottom: 0;
+    }
+}

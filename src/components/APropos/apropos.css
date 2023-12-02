@@ -49,3 +49,28 @@
     font-size: 0.75rem;
     font-weight: 200;
 }
+
+@media screen and (min-width: 430px) and (max-width: 767px) {
+   .listSkillItemText {
+        font-size: 2vw;
+   }
+
+   .listSkills {
+        padding: 0;
+   }
+
+
+   .a-propos-titre {
+        width: 100%;
+        margin: 0 auto;
+        padding: 1rem
+   }
+
+   .a-propos-description {
+        padding : 1rem 3rem;
+   }
+
+   #a-propos {
+    width: auto;
+   }
+}
