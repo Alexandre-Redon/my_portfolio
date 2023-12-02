@@ -59,6 +59,10 @@
     letter-spacing: 1px;
 }
 
+.github-redirect {
+    width: 173px;
+}
+
 @media screen and (max-width: 720px) {
     .presentationContenu {
         font-size: 10vw;
@@ -80,5 +84,9 @@
 
     .descriptionPara {
         margin-top: 1rem;
+    }
+
+    .github-redirect {
+        align-self: center;
     }
 }

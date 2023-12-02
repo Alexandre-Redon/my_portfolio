@@ -12,7 +12,11 @@ const Presentation = () => {
         <p className="descriptionPara">
           Je suis en alternance depuis 2022. Mon objectif : devenir fullstack !
         </p>
-        <a href="https://github.com/WasthElse2002" target="_blank">
+        <a
+          href="https://github.com/WasthElse2002"
+          className="github-redirect"
+          target="_blank"
+        >
           <button className="button-a-propos">Voir mon Github</button>
         </a>
       </div>
